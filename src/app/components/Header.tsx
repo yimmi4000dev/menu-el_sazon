@@ -18,6 +18,7 @@ export default function Header({ activePage }: HeaderProps) {
               width={64}
               height={64}
             />
+            <h1 className="text-lg font-bold ml-2 text-gray-600">El Sazón Arepas</h1>
           </Link>
 
           <ul className="flex space-x-6">

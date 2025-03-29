@@ -108,7 +108,7 @@ export default function MenuPage() {
               className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition"
               onClick={() => setSelectedProduct(product)}
             >
-              <div className="w-full aspect-square overflow-hidden">
+              <div className="w-full h-42 overflow-hidden">
                 <img
                   src={product.image}
                   alt={product.name}
@@ -118,7 +118,7 @@ export default function MenuPage() {
               </div>
               <div className="p-4">
                 <h3 className="font-bold text-lg">{product.name}</h3>
-                <p className="text-gray-600 text-sm line-clamp-2">
+                <p className="text-gray-600 text-sm line-clamp-1">
                   {product.description}
                 </p>
                 <p className="font-bold mt-2 text-orange-500">
