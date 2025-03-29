@@ -7,16 +7,16 @@ interface HeaderProps {
 
 export default function Header({ activePage }: HeaderProps) {
   return (
-    <header className="bg-white shadow-sm w-full">
-      <nav className="mx-auto w-full max-w-[1100px] px-4 py-3">
+    <header className="bg-white shadow-sm fixed top-0 w-full z-50">
+      <nav className="mx-auto w-full max-w-[1100px] px-3 py-2">
         <div className="flex justify-between items-center">
           {/* Logo (usa Link en lugar de <a>) */}
           <Link href="/" className="flex items-center">
             <Image
               src="/images/LOGO.png"
               alt="Logo de El Sazón"
-              width={64}
-              height={64}
+              width={56}
+              height={56}
             />
             <h1 className="text-lg font-bold ml-2 text-gray-600">El Sazón Arepas</h1>
           </Link>
