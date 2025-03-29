@@ -13,7 +13,7 @@ export default function Header({ activePage }: HeaderProps) {
           {/* Logo (usa Link en lugar de <a>) */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo.png"
+              src="/images/LOGO.png"
               alt="Logo de El Sazón"
               width={64}
               height={64}
