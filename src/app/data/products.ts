@@ -15,7 +15,7 @@ export const products: Product[] = [
     name: "Arepa rellena con todo",
     description: "Pollo, carne, huevo y chorizo",
     price: 9000,
-    category: "arepa",
+    category: "arepas",
     image: "/images/arepa.jpg"
   }
 ];
