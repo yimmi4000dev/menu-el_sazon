@@ -1,103 +1,127 @@
-import Image from "next/image";
+'use client';
+import { useState } from 'react';
+import { products } from '@/app/data/products';
+import { formatPrice, filterByCategory } from '@/app/data/utils';
+import type { Product } from '@/app/data/types';
 
-export default function Home() {
+export default function MenuPage() {
+  const [currentCategory, setCurrentCategory] = useState('todos');
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [cart, setCart] = useState<Product[]>([]);
+  const [quantity, setQuantity] = useState(1);
+
+  const filteredProducts = filterByCategory(products, currentCategory);
+
+  const addToCart = (product: Product) => {
+    const productWithQuantity = { ...product, quantity };
+    setCart([...cart, productWithQuantity]);
+    setSelectedProduct(null);
+    setQuantity(1);
+  };
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="container mx-auto p-4">
+      {/* Filtros */}
+      <div className="flex flex-wrap gap-2 mb-6">
+        {['todos', 'hamburguesas', 'arepas'].map((category) => (
+          <button
+            key={category}
+            onClick={() => setCurrentCategory(category)}
+            className={`px-4 py-2 rounded-full ${
+              currentCategory === category 
+                ? 'bg-orange-500 text-white' 
+                : 'bg-gray-200'
+            }`}
+          >
+            {category.charAt(0).toUpperCase() + category.slice(1)}
+          </button>
+        ))}
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      {/* Lista de productos */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filteredProducts.map((product) => (
+          <div
+            key={product.id}
+            className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition"
+            onClick={() => setSelectedProduct(product)}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-full h-48 object-cover"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <div className="p-4">
+              <h3 className="font-bold text-lg">{product.name}</h3>
+              <p className="text-gray-600 text-sm line-clamp-2">
+                {product.description}
+              </p>
+              <p className="font-bold mt-2 text-orange-500">
+                {formatPrice(product.price)}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Modal de producto */}
+      {selectedProduct && (
+        <div className="fixed inset-0 backdrop-blur-md bg-black/30 flex items-center justify-center z-50 p-4">
+          <div 
+            className="bg-white rounded-lg max-w-md w-full overflow-hidden shadow-xl"
+            onClick={(e) => e.stopPropagation()} // Evita que el clic en el modal lo cierre
           >
-            Read our docs
-          </a>
+            <img
+              src={selectedProduct.image}
+              alt={selectedProduct.name}
+              className="w-full h-64 object-cover"
+            />
+            <div className="p-6">
+              <h3 className="text-2xl font-bold">{selectedProduct.name}</h3>
+              <p className="text-gray-600 mt-2">{selectedProduct.description}</p>
+              <p className="text-orange-500 font-bold text-xl mt-4">
+                {formatPrice(selectedProduct.price)}
+              </p>
+
+              {/* Selector de cantidad */}
+              <div className="flex items-center gap-4 mt-6">
+                <button
+                  onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                  className="px-3 py-1 bg-gray-200 rounded"
+                >
+                  -
+                </button>
+                <span>{quantity}</span>
+                <button
+                  onClick={() => setQuantity(quantity + 1)}
+                  className="px-3 py-1 bg-gray-200 rounded"
+                >
+                  +
+                </button>
+              </div>
+
+              {/* Botones de acción */}
+              <div className="flex gap-4 mt-6">
+                <button
+                  onClick={() => {
+                    setSelectedProduct(null);
+                    setQuantity(1);
+                  }}
+                  className="flex-1 py-2 border border-gray-300 rounded-lg"
+                >
+                  Cerrar
+                </button>
+                <button
+                  onClick={() => addToCart(selectedProduct)}
+                  className="flex-1 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition"
+                >
+                  Añadir al carrito
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      )}
     </div>
   );
 }
