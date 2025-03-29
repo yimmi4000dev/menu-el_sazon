@@ -41,17 +41,20 @@ export default function MenuPage() {
 
   // Añadir al carrito con verificación de duplicados
   const addToCart = (product: Product) => {
-    setCart(prevCart => {
-      const existingItem = prevCart.find(item => item.id === product.id);
-      
-      return existingItem
-        ? prevCart.map(item => ({
-            ...item,
-            quantity: (item as Product & { quantity: number }).quantity + quantity // ← Tipo combinado
-          }))
-        : [...prevCart, { ...product, quantity }];
-    });
-  };
+  setCart(prevCart => {
+    const existingItem = prevCart.find(item => item.id === product.id);
+    
+    return existingItem
+      ? prevCart.map(item => ({
+          ...item,
+          quantity: (item as any).quantity + quantity // ← Solución rápida
+        }))
+      : [...prevCart, { ...product, quantity }];
+  });
+  
+  setSelectedProduct(null);
+  setQuantity(1);
+};
 
   // Categorías disponibles
   const categories = [
