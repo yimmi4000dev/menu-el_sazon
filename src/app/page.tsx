@@ -1,36 +1,88 @@
-'use client';
-import { useState } from 'react';
-import { products } from '@/app/data/products';
-import { formatPrice, filterByCategory } from '@/app/data/utils';
-import type { Product } from '@/app/data/types';
+"use client";
+import { useState, useEffect } from "react";
+import { products } from "@/app/data/products";
+import { formatPrice } from "@/app/data/utils";
+import type { Product } from "@/app/data/types";
 
 export default function MenuPage() {
-  const [currentCategory, setCurrentCategory] = useState('todos');
+  const [currentCategory, setCurrentCategory] = useState("todos");
+  const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [cart, setCart] = useState<Product[]>([]);
   const [quantity, setQuantity] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const filteredProducts = filterByCategory(products, currentCategory);
+  // Función de filtro estricta con validación
+  const filterProducts = (category: string): Product[] => {
+    if (category === "todos") return [...products];
 
+    return products.filter((product) => {
+      // Validación completa del producto
+      if (!product.id || !product.category) return false;
+
+      // Verificación exacta de la categoría
+      return product.category.toLowerCase() === category.toLowerCase();
+    });
+  };
+
+  // Efecto para filtrar productos cuando cambia la categoría
+  useEffect(() => {
+    setIsLoading(true);
+
+    const timer = setTimeout(() => {
+      const result = filterProducts(currentCategory);
+      console.log("Productos filtrados:", result); // Para debug
+      setFilteredProducts(result);
+      setIsLoading(false);
+    }, 50);
+
+    return () => clearTimeout(timer);
+  }, [currentCategory]);
+
+  // Añadir al carrito con verificación de duplicados
   const addToCart = (product: Product) => {
-    const productWithQuantity = { ...product, quantity };
-    setCart([...cart, productWithQuantity]);
+    setCart((prevCart) => {
+      const existingItem = prevCart.find((item) => item.id === product.id);
+      if (existingItem) {
+        return prevCart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + quantity }
+            : item
+        );
+      }
+      return [...prevCart, { ...product, quantity }];
+    });
     setSelectedProduct(null);
     setQuantity(1);
   };
+
+  // Categorías disponibles
+  const categories = [
+    "todos",
+    "arepas",
+    "chorizos",
+    "hamburguesas",
+    "perros calientes",
+    "salchipapas",
+    "bebidas",
+    "adicciones",
+  ];
 
   return (
     <div className="container mx-auto p-4">
       {/* Filtros */}
       <div className="flex flex-wrap gap-2 mb-6">
-        {['todos', 'hamburguesas', 'arepas'].map((category) => (
+        {categories.map((category) => (
           <button
             key={category}
-            onClick={() => setCurrentCategory(category)}
-            className={`px-4 py-2 rounded-full ${
-              currentCategory === category 
-                ? 'bg-orange-500 text-white' 
-                : 'bg-gray-200'
+            onClick={() => {
+              console.log("Seleccionada categoría:", category);
+              setCurrentCategory(category);
+            }}
+            className={`px-4 py-2 rounded-full transition-colors ${
+              currentCategory === category
+                ? "bg-orange-500 text-white"
+                : "bg-gray-200 hover:bg-gray-300"
             }`}
           >
             {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -38,82 +90,108 @@ export default function MenuPage() {
         ))}
       </div>
 
-      {/* Lista de productos */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredProducts.map((product) => (
-          <div
-            key={product.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition"
-            onClick={() => setSelectedProduct(product)}
-          >
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="font-bold text-lg">{product.name}</h3>
-              <p className="text-gray-600 text-sm line-clamp-2">
-                {product.description}
-              </p>
-              <p className="font-bold mt-2 text-orange-500">
-                {formatPrice(product.price)}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
+      {/* Estado de carga */}
+      {isLoading && (
+        <div className="flex justify-center items-center h-64">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-orange-500"></div>
+        </div>
+      )}
 
-      {/* Modal de producto */}
+      {/* Lista de productos */}
+      {!isLoading && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredProducts.map((product) => (
+            <div
+              key={`${product.id}-${product.category}-${Math.random()
+                .toString(36)
+                .substr(2, 5)}`}
+              className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition"
+              onClick={() => setSelectedProduct(product)}
+            >
+              <div className="w-full aspect-square overflow-hidden">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-lg">{product.name}</h3>
+                <p className="text-gray-600 text-sm line-clamp-2">
+                  {product.description}
+                </p>
+                <p className="font-bold mt-2 text-orange-500">
+                  {formatPrice(product.price)}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Mensaje cuando no hay productos */}
+      {!isLoading && filteredProducts.length === 0 && (
+        <div className="text-center py-12">
+          <p className="text-gray-500 text-lg">
+            No hay productos disponibles en esta categoría
+          </p>
+        </div>
+      )}
+
+      {/* Modal del producto */}
       {selectedProduct && (
         <div className="fixed inset-0 backdrop-blur-md bg-black/30 flex items-center justify-center z-50 p-4">
-          <div 
+          {/* Contenido del modal se mantiene igual */}
+          <div
             className="bg-white rounded-lg max-w-md w-full overflow-hidden shadow-xl"
-            onClick={(e) => e.stopPropagation()} // Evita que el clic en el modal lo cierre
+            onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={selectedProduct.image}
-              alt={selectedProduct.name}
-              className="w-full h-64 object-cover"
-            />
+            <div className="w-full aspect-square overflow-hidden">
+              <img
+                src={selectedProduct.image}
+                alt={selectedProduct.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div className="p-6">
               <h3 className="text-2xl font-bold">{selectedProduct.name}</h3>
-              <p className="text-gray-600 mt-2">{selectedProduct.description}</p>
+              <p className="text-gray-600 mt-2">
+                {selectedProduct.description}
+              </p>
               <p className="text-orange-500 font-bold text-xl mt-4">
                 {formatPrice(selectedProduct.price)}
               </p>
 
-              {/* Selector de cantidad */}
               <div className="flex items-center gap-4 mt-6">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="px-3 py-1 bg-gray-200 rounded"
+                  className="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition"
                 >
                   -
                 </button>
-                <span>{quantity}</span>
+                <span className="text-lg font-medium">{quantity}</span>
                 <button
                   onClick={() => setQuantity(quantity + 1)}
-                  className="px-3 py-1 bg-gray-200 rounded"
+                  className="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition"
                 >
                   +
                 </button>
               </div>
 
-              {/* Botones de acción */}
               <div className="flex gap-4 mt-6">
                 <button
                   onClick={() => {
                     setSelectedProduct(null);
                     setQuantity(1);
                   }}
-                  className="flex-1 py-2 border border-gray-300 rounded-lg"
+                  className="flex-1 py-3 border border-gray-300 rounded-lg hover:bg-gray-100 transition"
                 >
                   Cerrar
                 </button>
                 <button
                   onClick={() => addToCart(selectedProduct)}
-                  className="flex-1 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition"
+                  className="flex-1 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition"
                 >
                   Añadir al carrito
                 </button>

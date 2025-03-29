@@ -7,8 +7,8 @@ interface HeaderProps {
 
 export default function Header({ activePage }: HeaderProps) {
   return (
-    <header className="bg-white shadow-sm">
-      <nav className="container mx-auto px-4 py-3">
+    <header className="bg-white shadow-sm w-full">
+      <nav className="mx-auto w-full max-w-[1100px] px-4 py-3">
         <div className="flex justify-between items-center">
           {/* Logo (usa Link en lugar de <a>) */}
           <Link href="/" className="flex items-center">
@@ -24,7 +24,7 @@ export default function Header({ activePage }: HeaderProps) {
             <li>
               <Link
                 href="/"
-                className={`text-base ${
+                className={`text-base font-bold ${
                   activePage === "home"
                     ? "font-bold text-blue-600"
                     : "text-gray-600 hover:text-blue-500"
@@ -36,7 +36,7 @@ export default function Header({ activePage }: HeaderProps) {
             <li>
               <Link
                 href="/cart" // Cambiado a /cart
-                className={`text-base ${
+                className={`text-base font-bold ${
                   activePage === "cart"
                     ? "font-bold text-blue-600"
                     : "text-gray-600 hover:text-blue-500"

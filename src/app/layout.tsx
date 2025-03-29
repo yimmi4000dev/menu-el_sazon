@@ -16,7 +16,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       </head>
       <body className="bg-gray-100 min-h-screen flex flex-col overflow-y-scroll">
         <Header /> 
-        <main className="container mx-auto p-4 max-w-5xl flex-grow">
+        <main className="container mx-auto p-4 max-w-[1000px] flex-grow">
           {children}
         </main>
         <Footer />
