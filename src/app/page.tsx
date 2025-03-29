@@ -47,13 +47,10 @@ export default function MenuPage() {
       return existingItem
         ? prevCart.map(item => ({
             ...item,
-            quantity: (item as any).quantity + quantity // ← Solución rápida
+            quantity: (item as Product & { quantity: number }).quantity + quantity // ← Tipo combinado
           }))
         : [...prevCart, { ...product, quantity }];
     });
-    
-    setSelectedProduct(null);
-    setQuantity(1);
   };
 
   // Categorías disponibles
