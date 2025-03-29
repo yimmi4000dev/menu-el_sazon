@@ -1,13 +1,12 @@
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
-import "@/app/styles/globals.css";
+import "@/app/styles/globals.css"; // Asegúrate de que la ruta sea correcta
 
 interface RootLayoutProps {
   children: React.ReactNode;
-  activePage?: string; // Prop opcional para la página activa
 }
 
-export default function RootLayout({ children, activePage }: RootLayoutProps) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="es">
       <head>
@@ -16,12 +15,13 @@ export default function RootLayout({ children, activePage }: RootLayoutProps) {
         <title>Yimmy Muñoz - Portfolio</title>
       </head>
       <body className="bg-gray-100 min-h-screen flex flex-col overflow-y-scroll">
-        <Header activePage={activePage} />
+        <Header /> 
         <main className="container mx-auto p-4 max-w-5xl flex-grow">
-          {children} {/* Equivalente al <slot /> de Astro */}
+          {children}
         </main>
         <Footer />
       </body>
     </html>
   );
 }
+
