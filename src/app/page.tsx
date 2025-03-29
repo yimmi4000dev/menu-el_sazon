@@ -41,17 +41,17 @@ export default function MenuPage() {
 
   // Añadir al carrito con verificación de duplicados
   const addToCart = (product: Product) => {
-    setCart((prevCart) => {
-      const existingItem = prevCart.find((item) => item.id === product.id);
-      if (existingItem) {
-        return prevCart.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + quantity }
-            : item
-        );
-      }
-      return [...prevCart, { ...product, quantity }];
+    setCart(prevCart => {
+      const existingItem = prevCart.find(item => item.id === product.id);
+      
+      return existingItem
+        ? prevCart.map(item => ({
+            ...item,
+            quantity: (item as any).quantity + quantity // ← Solución rápida
+          }))
+        : [...prevCart, { ...product, quantity }];
     });
+    
     setSelectedProduct(null);
     setQuantity(1);
   };
