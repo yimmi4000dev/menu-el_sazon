@@ -42,7 +42,7 @@ export const products: Product[] = [
       "Carne desmechada, pollo desmechado, jamón, queso, chorizo Brisas picado, huevo de codorniz, maiz tierno en salsa, mantequilla y sal",
     price: 12000,
     category: "arepas",
-    image: "/images/cargando.png",
+    image: "/images/arepa_criolla.png",
   },
   {
     id: 6,
@@ -50,7 +50,7 @@ export const products: Product[] = [
     description: "Chorizo con limon acompañado con arepa con mantequilla y sal",
     price: 5000,
     category: "chorizos",
-    image: "/images/cargando.png",
+    image: "/images/chorizo.png",
   },
   {
     id: 7,
@@ -66,7 +66,7 @@ export const products: Product[] = [
     description: "(Pan o platano), lechuga, tomate, carne artesanal, cebolla caramelizada, ripio, jamon, queso y salsas",
     price: 6000,
     category: "hamburguesas",
-    image: "/images/cargando.png",
+    image: "/images/hamburguesa_clasica.png",
   },
   {
     id: 9,
@@ -74,7 +74,7 @@ export const products: Product[] = [
     description: "Arepa con mantequilla y sal, lechuga, tomate, carne artesanal, cebolla caramelizada, ripio, jamon, queso y salsas",
     price: 7000,
     category: "hamburguesas",
-    image: "/images/cargando.png",
+    image: "/images/arepa_burguer.png",
   },
   {
     id: 10,
@@ -82,7 +82,7 @@ export const products: Product[] = [
     description: "(Pan o platano), lechuga, tomate, carne artesanal, cebolla caramelizada, ripio, jamon, queso, piña caramelizada y salsas",
     price: 8000,
     category: "hamburguesas",
-    image: "/images/cargando.png",
+    image: "/images/hamburguesa_hawaiana.png",
   },
   {
     id: 11,
@@ -138,12 +138,12 @@ export const products: Product[] = [
     description: "(Pan o platano), lechuga, tomate, doble carne artesanal, cebolla caramelizada, ripio, jamon, queso, chorizo Brisa picado, tocineta, huevo frito y salsas",
     price: 10000,
     category: "hamburguesas",
-    image: "/images/cargando.png",
+    image: "/images/hamburguesa_ranchera_especial.png",
   },
   {
     id: 17,
     name: "Hamburguesa criolla",
-    description: "(Pan o platano), lechuga, tomate, doble carne artesanal, cebolla caramelizada, ripio, jamon, queso, chorizo Brisa picado, tocineta, maiz tierno en salsa y salsas",
+    description: "(Pan o platano), lechuga, tomate, doble carne artesanal, cebolla caramelizada, ripio, jamon, queso, tocineta, maiz tierno en salsa y salsas",
     price: 10000,
     category: "hamburguesas",
     image: "/images/cargando.png",
@@ -210,7 +210,7 @@ export const products: Product[] = [
     description: "Pan, salchicha americana, cebolla caramelizada, ripio, queso, piña caramelizada y salsas",
     price: 10000,
     category: "perros calientes",
-    image: "/images/cargando.png",
+    image: "/images/perro_hawaiano.png",
   },
   {
     id: 25,
