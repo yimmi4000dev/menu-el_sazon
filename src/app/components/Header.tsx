@@ -18,7 +18,7 @@ export default function Header({ activePage }: HeaderProps) {
               width={56}
               height={56}
             />
-            <h1 className="text-lg font-bold ml-2 text-gray-600">El Sazón Arepas</h1>
+            <h1 className="text-lg font-bold ml-2 text-gray-600">El Sazón</h1>
           </Link>
 
           <ul className="flex space-x-6">
@@ -28,10 +28,10 @@ export default function Header({ activePage }: HeaderProps) {
                 className={`text-base font-bold ${
                   activePage === "home"
                     ? "font-bold text-blue-600"
-                    : "text-gray-600 hover:text-blue-500"
+                    : "text-gray-600 hover:text-blue-500 underline"
                 }`}
               >
-                Inicio
+                INICIO
               </Link>
             </li>
             <li>
@@ -40,10 +40,11 @@ export default function Header({ activePage }: HeaderProps) {
                 className={`text-base font-bold ${
                   activePage === "cart"
                     ? "font-bold text-blue-600"
-                    : "text-gray-600 hover:text-blue-500"
+                    // : "text-gray-600 hover:text-blue-500 underline"
+                    : "text-[#4e724c] hover:text-[#58ad52] underline"
                 }`}
               >
-                Carrito
+                HACER PEDIDO
               </Link>
             </li>
           </ul>
