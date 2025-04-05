@@ -22,7 +22,7 @@ export default function CartPage() {
     <div className="container mx-auto p-4 mt-16">
       <h1 className="text-2xl font-bold mb-6">Domicilios: </h1>
       <a
-        href="https://wa.me/573001112233?text=Hola!%20Estoy%20interesado%20en%20hacer%20un%20pedido."
+        href="https://wa.me/573203208915?text=Hola!%20Estoy%20interesado%20en%20hacer%20un%20pedido."
         target="_blank"
         rel="noopener noreferrer"
         className="bg-green-500 hover:bg-green-600 text-white font-bold text-[1.7rem] w-[200px] py-2 px-4 rounded-full shadow flex items-center gap-2 transition-all"
