@@ -24,7 +24,7 @@ export const products: Product[] = [
     description: "Carne desmechada, pollo desmechado, huevos de codorniz, mantequilla y sal",
     price: 8000,
     category: "arepas",
-    image: "/images/cargando.png",
+    image: "/images/arepa_mixta.png",
   },
   {
     id: 4,
@@ -58,7 +58,7 @@ export const products: Product[] = [
     description: "Chorizo con limon acompañado con arepa de jamón, queso, mantequilla y sal",
     price: 8000,
     category: "chorizos",
-    image: "/images/cargando.png",
+    image: "/images/chorizo_super.png",
   },
   {
     id: 8,
@@ -90,7 +90,7 @@ export const products: Product[] = [
     description: "(Pan o platano), lechuga, tomate, carne artesanal, cebolla caramelizada, ripio, jamon, queso, jalapeños y salsas",
     price: 8000,
     category: "hamburguesas",
-    image: "/images/cargando.png",
+    image: "/images/hamburguesa_mexicana.png",
   },
   {
     id: 12,
@@ -98,7 +98,7 @@ export const products: Product[] = [
     description: "(Pan o platano), lechuga, tomate, carne artesanal, cebolla caramelizada, ripio, jamon, queso, salchicha picada, huevo frito y salsas",
     price: 8000,
     category: "hamburguesas",
-    image: "/images/cargando.png",
+    image: "/images/hamburguesa_ranchera_sencilla.png",
   },
   {
     id: 12,
@@ -122,7 +122,7 @@ export const products: Product[] = [
     description: "(Pan o platano), lechuga, tomate, carne artesanal, cebolla caramelizada, ripio, jamon, queso gratinado y salsas",
     price: 9000,
     category: "hamburguesas",
-    image: "/images/cargando.png",
+    image: "/images/hamburguesa_gratinada.png",
   },
   {
     id: 15,
@@ -194,7 +194,7 @@ export const products: Product[] = [
     description: "Pan, salchicha americana, cebolla caramelizada, ripio, queso y salsas",
     price: 10000,
     category: "perros calientes",
-    image: "/images/cargando.png",
+    image: "/images/perro_americano.png",
   },
   {
     id: 24,
@@ -218,7 +218,7 @@ export const products: Product[] = [
     description: "Pan, salchicha americana, cebolla caramelizada, ripio, queso, tocineta y salsas",
     price: 12000,
     category: "perros calientes",
-    image: "/images/cargando.png",
+    image: "/images/perro_ranchero.png",
   },
   {
     id: 26,
