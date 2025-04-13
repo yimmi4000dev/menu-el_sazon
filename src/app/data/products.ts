@@ -8,7 +8,7 @@ export const products: Product[] = [
     description: "Doble quesillo, jamón, mantequilla y sal",
     price: 4000,
     category: "arepas",
-    image: "/images/cargando.png",
+    image: "/images/arepa_jamon_queso.png",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ export const products: Product[] = [
     description: "Extra de quesillo, mantequilla y sal",
     price: 5000,
     category: "arepas",
-    image: "/images/cargando.png",
+    image: "/images/arepa_extra_queso.png",
   },
   {
     id: 3,
@@ -130,7 +130,7 @@ export const products: Product[] = [
     description: "(Pan o platano), lechuga, tomate, doble carne artesanal, cebolla caramelizada, ripio, jamon, queso y salsas",
     price: 9000,
     category: "hamburguesas",
-    image: "/images/cargando.png",
+    image: "/images/hamburguesa_doble_res.png",
   },
   {
     id: 16,
@@ -146,7 +146,7 @@ export const products: Product[] = [
     description: "(Pan o platano), lechuga, tomate, doble carne artesanal, cebolla caramelizada, ripio, jamon, queso, tocineta, maiz tierno en salsa y salsas",
     price: 10000,
     category: "hamburguesas",
-    image: "/images/cargando.png",
+    image: "/images/hamburguesa_criolla.png",
   },
   {
     id: 18,
@@ -186,7 +186,7 @@ export const products: Product[] = [
     description: "Pan, salchicha, cebolla caramelizada, ripio, queso y salsas",
     price: 8000,
     category: "perros calientes",
-    image: "/images/cargando.png",
+    image: "/images/perro_super.png",
   },
   {
     id: 23,
@@ -215,7 +215,7 @@ export const products: Product[] = [
   {
     id: 25,
     name: "Perro caliente ranchero",
-    description: "Pan, salchicha americana, cebolla caramelizada, ripio, queso, tocineta y salsas",
+    description: "Pan, salchicha americana, cebolla caramelizada, ripio, queso, tocineta, huevos de codorniz y salsas",
     price: 12000,
     category: "perros calientes",
     image: "/images/perro_ranchero.png",
@@ -234,7 +234,7 @@ export const products: Product[] = [
     description: "Papa a la francesa, salchicha, maduro, jamon y queso",
     price: 12000,
     category: "salchipapas",
-    image: "/images/cargando.png",
+    image: "/images/salchipapa_clasica.png",
   },
   {
     id: 28,
@@ -242,7 +242,7 @@ export const products: Product[] = [
     description: "Papa a la francesa, salchicha, maduro, jamon, maiz tierno en salsa y queso fundido",
     price: 15000,
     category: "salchipapas",
-    image: "/images/cargando.png",
+    image: "/images/salchipapa_gratinada.png",
   },
   {
     id: 29,
@@ -258,7 +258,7 @@ export const products: Product[] = [
     description: "Papa a la francesa, salchicha, maduro, jamon, carne desmechada, pollo desmechado y queso fundido",
     price: 25000,
     category: "salchipapas",
-    image: "/images/cargando.png",
+    image: "/images/salchipapa_super.png",
   },
   {
     id: 30,
