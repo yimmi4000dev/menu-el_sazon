@@ -18,8 +18,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
   <meta property="og:title" content="El Sazón Arepas - Burguer" />
   <meta property="og:description" content="Explora nuestro menú interactivo y haz tu pedido fácilmente por WhatsApp." />
   <meta property="og:image" content="https://menu-el-sazon.vercel.app/images/LOGO_Meta.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="600" />
 
   <meta property="og:url" content="https://menu-el-sazon.vercel.app/" />
   <meta property="og:type" content="website" />
