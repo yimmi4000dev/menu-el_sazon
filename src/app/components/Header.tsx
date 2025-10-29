@@ -1,5 +1,6 @@
 import Link from "next/link"; // Añade esta importación
 import Image from "next/image"; // Importa el componente Image
+import WhatsAppButton from "../components/WhatsAppButton";
 
 interface HeaderProps {
   activePage?: string;
@@ -20,22 +21,7 @@ export default function Header({ activePage }: HeaderProps) {
             />
             <h1 className="text-lg font-bold ml-2 text-gray-600">El Sazón</h1>
           </Link>
-
-          <ul className="flex space-x-6">
-            <a
-              href="https://wa.me/573203208915?text=Hola,%20estoy%20interesado%20en%20hacer%20un%20pedido.%20%5BDesde%20la%20Web%5D"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-green-600 text-white font-bold text-[1.7rem] w-[200px] py-1 px-5 rounded-full shadow flex items-center gap-2 transition-all"
-            >
-              <img
-                src="/images/whatsapp.png"
-                alt="WhatsApp"
-                className="w-5 h-5"
-              />
-              WhatsApp
-            </a>
-          </ul>
+          <WhatsAppButton />
         </div>
       </nav>
     </header>
