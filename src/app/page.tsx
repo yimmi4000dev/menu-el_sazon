@@ -164,37 +164,15 @@ export default function MenuPage() {
                 {formatPrice(selectedProduct.price)}
               </p>
 
-              <div className="flex items-center gap-4 mt-6">
-                <button
-                  onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition"
-                >
-                  -
-                </button>
-                <span className="text-lg font-medium">{quantity}</span>
-                <button
-                  onClick={() => setQuantity(quantity + 1)}
-                  className="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition"
-                >
-                  +
-                </button>
-              </div>
-
               <div className="flex gap-4 mt-6">
                 <button
                   onClick={() => {
                     setSelectedProduct(null);
                     setQuantity(1);
                   }}
-                  className="flex-1 py-3 border border-gray-300 rounded-lg hover:bg-gray-100 transition"
+                  className="flex-1 py-3 border bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition"
                 >
                   Cerrar
-                </button>
-                <button
-                  onClick={() => addToCart(selectedProduct)}
-                  className="flex-1 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition"
-                >
-                  Añadir al carrito
                 </button>
               </div>
             </div>

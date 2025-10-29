@@ -1,5 +1,5 @@
 import { Product } from "./types";
-import { formatPrice } from "@/app/data/utils";
+
 
 export const products: Product[] = [
   {
@@ -22,7 +22,7 @@ export const products: Product[] = [
     id: 3,
     name: "Arepa mixta",
     description: "Carne desmechada, pollo desmechado, huevos de codorniz, mantequilla y sal",
-    price: 8000,
+    price: 9000,
     category: "arepas",
     image: "/images/arepa_mixta.png",
   },
@@ -31,7 +31,7 @@ export const products: Product[] = [
     name: "Arepa rellena",
     description:
       "Carne desmechada, pollo desmechado, jamón, queso, chorizo Brisas picado, huevo de codorniz, mantequilla y sal",
-    price: 9000,
+    price: 10000,
     category: "arepas",
     image: "/images/arepa_rellena.png",
   },
