@@ -30,7 +30,7 @@ const WhatsAppButton: React.FC = () => {
         rel="noopener noreferrer"
         className="bg-green-500 hover:bg-green-600 text-white font-bold text-[1.5rem] w-[190px] py-1 px-5 rounded-full shadow flex items-center gap-2 transition-all"
       >
-        <img src="/images/whatsapp.png" alt="WhatsApp" className="w-5 h-5" />
+        <img src="/images/whatsapp.svg" alt="WhatsApp" className="w-5 h-5" />
         WhatsApp
       </a>
     //</ul>
