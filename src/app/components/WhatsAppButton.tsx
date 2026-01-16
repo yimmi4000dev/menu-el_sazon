@@ -28,7 +28,7 @@ const WhatsAppButton: React.FC = () => {
         href="https://wa.me/573203208915?text=Hola,%20estoy%20interesado%20en%20hacer%20un%20pedido.%20%5BDesde%20la%20Web%5D"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-green-500 hover:bg-green-600 text-white font-bold text-[1.5rem] w-[190px] py-1 px-5 rounded-full shadow flex items-center gap-2 transition-all"
+        className="bg-green-500 hover:bg-green-600 text-white font-bold text-[1.5rem] w-[200px] py-2 px-6 rounded-full shadow flex gap-2 transition-all"
       >
         <img src="/images/whatsapp.svg" alt="WhatsApp" className="w-7 h-7" />
         WhatsApp
