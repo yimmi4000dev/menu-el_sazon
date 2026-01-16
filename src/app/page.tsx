@@ -64,6 +64,7 @@ export default function MenuPage() {
     "hamburguesas",
     "perros calientes",
     "salchipapas",
+    "patacon",
     "bebidas",
     "adicciones",
   ];

@@ -262,6 +262,22 @@ export const products: Product[] = [
   },
   {
     id: 31,
+    name: "Patacon personal",
+    description: "Maduro, carne desmechado, pollo desmechado, queso y huevos de codorniz",
+    price: 20000,
+    category: "patacon",
+    image: "/images/cargando.png",
+  },
+  {
+    id: 32,
+    name: "Patacon con todo",
+    description: "Maduro, carne desmechado, pollo desmechado, chorizo Brisas picado, chicharron, queso y huevos de codorniz",
+    price: 30000,
+    category: "patacon",
+    image: "/images/cargando.png",
+  },
+  {
+    id: 33,
     name: "Jarra de limonada",
     description: "Jarra de limonada de 800ml",
     price: 5000,
@@ -269,7 +285,7 @@ export const products: Product[] = [
     image: "/images/cargando.png",
   },
   {
-    id: 32,
+    id: 34,
     name: "Jarra de limonada",
     description: "Jarra de limonada de 1.2 litros",
     price: 6000,
@@ -277,7 +293,7 @@ export const products: Product[] = [
     image: "/images/cargando.png",
   },
   {
-    id: 33,
+    id: 35,
     name: "Coca cola personal",
     description: "Gaseosa de 400ml",
     price: 4000,
@@ -285,7 +301,7 @@ export const products: Product[] = [
     image: "/images/cargando.png",
   },
   {
-    id: 34,
+    id: 36,
     name: "Manzana personal",
     description: "Gaseosa de 500ml",
     price: 3000,
