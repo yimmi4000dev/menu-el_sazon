@@ -13,7 +13,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>El Sazon Arepas</title>
-        <link rel="icon" href="/images/favicon.ico.png" type="image/png" />
+        <link rel="icon" href="/images/LOGO.png" type="image/png" />
 
         {/* Metadatos Open Graph */}
         <meta property="og:title" content="El Sazón Arepas" />
