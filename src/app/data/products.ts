@@ -135,7 +135,7 @@ export const products: Product[] = [
   {
     id: 16,
     name: "Hamburguesa ranchera especial",
-    description: "(Pan o platano), lechuga, tomate, doble carne artesanal, cebolla caramelizada, ripio, jamon, queso, chorizo Brisa picado, tocineta, huevo frito y salsas",
+    description: "(Pan o platano), lechuga, tomate, carne artesanal, cebolla caramelizada, ripio, jamon, queso, chorizo Brisa picado, tocineta, huevo frito y salsas",
     price: 10000,
     category: "hamburguesas",
     image: "/images/hamburguesa_ranchera_especial.png",
@@ -143,7 +143,7 @@ export const products: Product[] = [
   {
     id: 17,
     name: "Hamburguesa criolla",
-    description: "(Pan o platano), lechuga, tomate, doble carne artesanal, cebolla caramelizada, ripio, jamon, queso, tocineta, maiz tierno en salsa y salsas",
+    description: "(Pan o platano), lechuga, tomate, carne artesanal, cebolla caramelizada, ripio, jamon, queso, tocineta, maiz tierno en salsa y salsas",
     price: 10000,
     category: "hamburguesas",
     image: "/images/hamburguesa_criolla.png",
