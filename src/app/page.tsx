@@ -8,8 +8,6 @@ export default function MenuPage() {
   const [currentCategory, setCurrentCategory] = useState("todos");
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  const [cart, setCart] = useState<Product[]>([]);
-  const [quantity, setQuantity] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
 
   // Función de filtro estricta con validación
@@ -39,23 +37,6 @@ export default function MenuPage() {
     return () => clearTimeout(timer);
   }, [currentCategory]);
 
-  // Añadir al carrito con verificación de duplicados
-  const addToCart = (product: Product) => {
-    setCart((prevCart) => {
-      const existingItem = prevCart.find((item) => item.id === product.id);
-
-      return existingItem
-        ? prevCart.map((item) => ({
-            ...item,
-            quantity: (item as any).quantity + quantity, // ← Solución rápida
-          }))
-        : [...prevCart, { ...product, quantity }];
-    });
-
-    setSelectedProduct(null);
-    setQuantity(1);
-  };
-
   // Categorías disponibles
   const categories = [
     "todos",
@@ -69,13 +50,32 @@ export default function MenuPage() {
     "adicciones",
   ];
 
+  // Lógica para que el botón "atrás" del celular cierre el modal
+useEffect(() => {
+  if (selectedProduct) {
+    // 1. Añadimos una entrada "ficticia" al historial cuando se abre el modal
+    window.history.pushState({ modalOpen: true }, "");
+
+    const handlePopState = () => {
+      // 2. Si el usuario da "atrás", cerramos el modal manualmente
+      setSelectedProduct(null);
+    };
+
+    // Escuchamos el evento del botón físico/atrás del navegador
+    window.addEventListener("popstate", handlePopState);
+
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }
+}, [selectedProduct]);
+
+
   return (
     <div className="container mx-auto p-4 mt-24">
       {/* Filtros anclados debajo del header */}
-      {/* <div className="w-full flex justify-center"> */}
-      {/* <div className="fixed top-[64px] left-0 w-full bg-white z-40 shadow-md flex justify-center"> */}
       <div className="fixed top-[70px] left-0 w-full bg-gray-100 flex justify-center">
-        <div className="max-w-[930px] w-full px-4 flex items-center gap-3 md:gap-4 overflow-x-auto whitespace-nowrap py-3 [&::-webkit-scrollbar]:hidden">
+        <div className="max-w-[1020px] w-full px-4 flex items-center gap-3 md:gap-4 overflow-x-auto whitespace-nowrap py-3 [&::-webkit-scrollbar]:hidden">
           {categories.map((category) => (
             <button
               key={category}
@@ -144,7 +144,6 @@ export default function MenuPage() {
       {/* Modal del producto */}
       {selectedProduct && (
         <div className="fixed inset-0 backdrop-blur-md bg-black/30 flex items-center justify-center z-50 p-4">
-          {/* Contenido del modal se mantiene igual */}
           <div
             className="bg-white rounded-lg max-w-md w-full overflow-hidden shadow-xl"
             onClick={(e) => e.stopPropagation()}
@@ -167,10 +166,7 @@ export default function MenuPage() {
 
               <div className="flex gap-4 mt-6">
                 <button
-                  onClick={() => {
-                    setSelectedProduct(null);
-                    setQuantity(1);
-                  }}
+                  onClick={() => setSelectedProduct(null)}
                   className="flex-1 py-3 border bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition"
                 >
                   Cerrar

@@ -2,8 +2,9 @@ import { Product } from "./types";
 
 
 export const products: Product[] = [
+  //ID de arepas sobre el numero 100
   {
-    id: 1,
+    id: 101,
     name: "Arepa jamón y queso",
     description: "Doble quesillo, jamón, mantequilla y sal",
     price: 5000,
@@ -11,7 +12,7 @@ export const products: Product[] = [
     image: "/images/arepa_jamon_queso.png",
   },
   {
-    id: 2,
+    id: 102,
     name: "Arepa extra queso",
     description: "Extra de quesillo, mantequilla y sal",
     price: 5000,
@@ -19,7 +20,7 @@ export const products: Product[] = [
     image: "/images/arepa_extra_queso.png",
   },
   {
-    id: 3,
+    id: 103,
     name: "Arepa mixta",
     description: "Carne desmechada, pollo desmechado, huevos de codorniz, mantequilla y sal",
     price: 9000,
@@ -27,7 +28,7 @@ export const products: Product[] = [
     image: "/images/arepa_mixta.png",
   },
   {
-    id: 4,
+    id: 104,
     name: "Arepa rellena",
     description:
       "Carne desmechada, pollo desmechado, jamón, queso, chorizo Brisas picado, huevo de codorniz, mantequilla y sal",
@@ -36,7 +37,7 @@ export const products: Product[] = [
     image: "/images/arepa_rellena.png",
   },
   {
-    id: 5,
+    id: 105,
     name: "Arepa criolla",
     description:
       "Carne desmechada, pollo desmechado, jamón, queso, chorizo Brisas picado, huevo de codorniz, maiz tierno en salsa, mantequilla y sal",
@@ -44,8 +45,10 @@ export const products: Product[] = [
     category: "arepas",
     image: "/images/arepa_criolla.png",
   },
+
+  //ID de chorizos sobre el numero 200
   {
-    id: 6,
+    id: 201,
     name: "Chorizo Brisas",
     description: "Chorizo con limon acompañado con arepa con mantequilla y sal",
     price: 6000,
@@ -53,15 +56,17 @@ export const products: Product[] = [
     image: "/images/chorizo.png",
   },
   {
-    id: 7,
+    id: 202,
     name: "Chorizo super",
     description: "Chorizo con limon acompañado con arepa de jamón, queso, mantequilla y sal",
     price: 10000,
     category: "chorizos",
     image: "/images/chorizo_super.png",
   },
+
+  //ID de hamburguesas sobre el numero 300
   {
-    id: 8,
+    id: 301,
     name: "Hamburguesa clasica",
     description: "(Pan o platano), lechuga, tomate, carne artesanal, cebolla caramelizada, ripio, jamon, queso y salsas",
     price: 6000,
@@ -69,7 +74,7 @@ export const products: Product[] = [
     image: "/images/hamburguesa_clasica.png",
   },
   {
-    id: 9,
+    id: 302,
     name: "Arepa burguer",
     description: "Arepa con mantequilla y sal, lechuga, tomate, carne artesanal, cebolla caramelizada, ripio, jamon, queso y salsas",
     price: 7000,
@@ -77,7 +82,7 @@ export const products: Product[] = [
     image: "/images/arepa_burguer.png",
   },
   {
-    id: 10,
+    id: 303,
     name: "Hamburguesa hawaiana",
     description: "(Pan o platano), lechuga, tomate, carne artesanal, cebolla caramelizada, ripio, jamon, queso, piña caramelizada y salsas",
     price: 8000,
@@ -85,7 +90,7 @@ export const products: Product[] = [
     image: "/images/hamburguesa_hawaiana.png",
   },
   {
-    id: 11,
+    id: 304,
     name: "Hamburguesa mexicana",
     description: "(Pan o platano), lechuga, tomate, carne artesanal, cebolla caramelizada, ripio, jamon, queso, jalapeños y salsas",
     price: 8000,
@@ -93,7 +98,7 @@ export const products: Product[] = [
     image: "/images/hamburguesa_mexicana.png",
   },
   {
-    id: 12,
+    id: 305,
     name: "Hamburguesa ranchera sencilla",
     description: "(Pan o platano), lechuga, tomate, carne artesanal, cebolla caramelizada, ripio, jamon, queso, salchicha picada, huevo frito y salsas",
     price: 8000,
@@ -101,7 +106,7 @@ export const products: Product[] = [
     image: "/images/hamburguesa_ranchera_sencilla.png",
   },
   {
-    id: 12,
+    id: 306,
     name: "Hamburguesa res Brisas",
     description: "(Pan o platano), lechuga, tomate, carne de res de la marca Las Brisas, cebolla caramelizada, ripio, jamon, queso y salsas",
     price: 8000,
@@ -109,7 +114,7 @@ export const products: Product[] = [
     image: "/images/cargando.png",
   },
   {
-    id: 13,
+    id: 307,
     name: "Hamburguesa cerdo Brisas",
     description: "(Pan o platano), lechuga, tomate, carne de cerdo de la marca Las Brisas, cebolla caramelizada, ripio, jamon, queso y salsas",
     price: 10000,
@@ -117,7 +122,7 @@ export const products: Product[] = [
     image: "/images/cargando.png",
   },
   {
-    id: 14,
+    id: 308,
     name: "Hamburguesa gratinada",
     description: "(Pan o platano), lechuga, tomate, carne artesanal, cebolla caramelizada, ripio, jamon, queso gratinado y salsas",
     price: 10000,
@@ -125,7 +130,7 @@ export const products: Product[] = [
     image: "/images/hamburguesa_gratinada.png",
   },
   {
-    id: 15,
+    id: 309,
     name: "Hamburguesa doble res",
     description: "(Pan o platano), lechuga, tomate, doble carne artesanal, cebolla caramelizada, ripio, jamon, queso y salsas",
     price: 10000,
@@ -133,7 +138,7 @@ export const products: Product[] = [
     image: "/images/hamburguesa_doble_res.png",
   },
   {
-    id: 16,
+    id: 310,
     name: "Hamburguesa ranchera especial",
     description: "(Pan o platano), lechuga, tomate, carne artesanal, cebolla caramelizada, ripio, jamon, queso, chorizo Brisa picado, tocineta, huevo frito y salsas",
     price: 10000,
@@ -141,7 +146,7 @@ export const products: Product[] = [
     image: "/images/hamburguesa_ranchera_especial.png",
   },
   {
-    id: 17,
+    id: 311,
     name: "Hamburguesa criolla",
     description: "(Pan o platano), lechuga, tomate, carne artesanal, cebolla caramelizada, ripio, jamon, queso, tocineta, maiz tierno en salsa y salsas",
     price: 10000,
@@ -149,7 +154,7 @@ export const products: Product[] = [
     image: "/images/hamburguesa_criolla.png",
   },
   {
-    id: 18,
+    id: 312,
     name: "Hamburguesa mixta",
     description: "(Pan o platano), lechuga, tomate, carne artesanal, carne de res o cerdo de la marca Las Brisas, cebolla caramelizada, ripio, jamon, queso y salsas",
     price: 13000,
@@ -157,7 +162,7 @@ export const products: Product[] = [
     image: "/images/cargando.png",
   },
   {
-    id: 19,
+    id: 313,
     name: "Hamburguesa doble res Brisas",
     description: "(Pan o platano), lechuga, tomate, doble carne de res de la marca Las Brisas, cebolla caramelizada, ripio, jamon, queso y salsas",
     price: 13000,
@@ -165,15 +170,17 @@ export const products: Product[] = [
     image: "/images/cargando.png",
   },
   {
-    id: 20,
+    id: 314,
     name: "Hamburguesa doble cerdo Brisas",
     description: "(Pan o platano), lechuga, tomate, doble carne de cerdo de la marca Las Brisas, cebolla caramelizada, ripio, jamon, queso y salsas",
     price: 14000,
     category: "hamburguesas",
     image: "/images/cargando.png",
   },
+
+  //ID de perros calientes sobre el numero 400
   {
-    id: 21,
+    id: 401,
     name: "Perro caliente clasico",
     description: "Pan, salchicha, ripio y salsas",
     price: 6000,
@@ -181,7 +188,7 @@ export const products: Product[] = [
     image: "/images/cargando.png",
   },
   {
-    id: 22,
+    id: 402,
     name: "Super perro caliente",
     description: "Pan, salchicha, cebolla caramelizada, ripio, queso y salsas",
     price: 8000,
@@ -189,7 +196,7 @@ export const products: Product[] = [
     image: "/images/perro_super.png",
   },
   {
-    id: 23,
+    id: 403,
     name: "Perro caliente americano",
     description: "Pan, salchicha americana, cebolla caramelizada, ripio, queso y salsas",
     price: 10000,
@@ -197,7 +204,7 @@ export const products: Product[] = [
     image: "/images/perro_americano.png",
   },
   {
-    id: 24,
+    id: 404,
     name: "Choriperro caliente",
     description: "Pan, chorizo de la marca Las Brisas, cebolla caramelizada, ripio, queso y salsas",
     price: 10000,
@@ -205,7 +212,7 @@ export const products: Product[] = [
     image: "/images/cargando.png",
   },
   {
-    id: 25,
+    id: 405,
     name: "Perro caliente hawaiano",
     description: "Pan, salchicha americana, cebolla caramelizada, ripio, queso, piña caramelizada y salsas",
     price: 10000,
@@ -213,7 +220,7 @@ export const products: Product[] = [
     image: "/images/perro_hawaiano.png",
   },
   {
-    id: 25,
+    id: 406,
     name: "Perro caliente ranchero",
     description: "Pan, salchicha americana, cebolla caramelizada, ripio, queso, tocineta, huevos de codorniz y salsas",
     price: 12000,
@@ -221,15 +228,17 @@ export const products: Product[] = [
     image: "/images/perro_ranchero.png",
   },
   {
-    id: 26,
+    id: 407,
     name: "Perro caliente criollo",
     description: "Pan, salchicha americana, cebolla caramelizada, ripio, queso, maiz tierno en salsa y salsas",
     price: 12000,
     category: "perros calientes",
     image: "/images/cargando.png",
   },
+
+  //ID de salchipapas sobre el numero 500
   {
-    id: 27,
+    id: 501,
     name: "Salchipapa clasica",
     description: "Papa a la francesa, salchicha, maduro, jamon y queso",
     price: 12000,
@@ -237,7 +246,7 @@ export const products: Product[] = [
     image: "/images/salchipapa_clasica.png",
   },
   {
-    id: 28,
+    id: 502,
     name: "Salchipapa gratinada",
     description: "Papa a la francesa, salchicha, maduro, jamon, maiz tierno en salsa y queso fundido",
     price: 15000,
@@ -245,7 +254,7 @@ export const products: Product[] = [
     image: "/images/salchipapa_gratinada.png",
   },
   {
-    id: 29,
+    id: 503,
     name: "Salchipapa extra",
     description: "Papa a la francesa, salchicha, chorizo de la marca Las Brisas, maduro, jamon, maiz tierno en salsa y queso fundido",
     price: 20000,
@@ -253,47 +262,59 @@ export const products: Product[] = [
     image: "/images/cargando.png",
   },
   {
-    id: 30,
+    id: 504,
     name: "Super salchipapa",
     description: "Papa a la francesa, salchicha, maduro, jamon, carne desmechada, pollo desmechado y queso fundido",
     price: 25000,
     category: "salchipapas",
     image: "/images/salchipapa_super.png",
   },
+
+  //ID de patacones sobre el numero 600
   {
-    id: 31,
+    id: 601,
     name: "Patacon personal",
-    description: "Maduro, carne desmechado, pollo desmechado, queso y huevos de codorniz",
+    description: "Maduro, lechuga, tomate, carne desmechado, pollo desmechado, queso y huevos de codorniz",
     price: 20000,
     category: "patacon",
     image: "/images/cargando.png",
   },
   {
-    id: 32,
+    id: 602,
     name: "Patacon con todo",
-    description: "Maduro, carne desmechado, pollo desmechado, chorizo Brisas picado, chicharron, queso y huevos de codorniz",
+    description: "Maduro, lechuga, tomate, carne desmechado, pollo desmechado, chorizo Brisas picado, chicharron, queso y huevos de codorniz",
     price: 30000,
     category: "patacon",
     image: "/images/cargando.png",
   },
   {
-    id: 33,
-    name: "Jarra de limonada",
+    id: 603,
+    name: "Mazorcada",
+    description: "Maduro, lechuga, tomate, carne desmechado, pollo desmechado, chorizo Brisas picado, maiz tierno en salsa, queso fundido y huevos de codorniz",
+    price: 35000,
+    category: "patacon",
+    image: "/images/cargando.png",
+  },
+
+  //ID de bebidas sobre el numero 700
+  {
+    id: 701,
+    name: "Jarra de limonada pequeña",
     description: "Jarra de limonada de 800ml",
     price: 5000,
     category: "bebidas",
     image: "/images/cargando.png",
   },
   {
-    id: 34,
-    name: "Jarra de limonada",
+    id: 702,
+    name: "Jarra de limonada grande",
     description: "Jarra de limonada de 1.2 litros",
     price: 6000,
     category: "bebidas",
     image: "/images/cargando.png",
   },
   {
-    id: 35,
+    id: 703,
     name: "Coca cola personal",
     description: "Gaseosa de 400ml",
     price: 4000,
@@ -301,11 +322,21 @@ export const products: Product[] = [
     image: "/images/cargando.png",
   },
   {
-    id: 36,
+    id: 704,
     name: "Manzana personal",
     description: "Gaseosa de 500ml",
     price: 3000,
     category: "bebidas",
     image: "/images/cargando.png",
   },
+  {
+    id: 705,
+    name: "Hit personal",
+    description: "Jugo Hit de 500ml",
+    price: 3500,
+    category: "bebidas",
+    image: "/images/cargando.png",
+  },
+
+  //ID de adicciones sobre el numero 800
 ];
