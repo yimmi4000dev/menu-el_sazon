@@ -76,7 +76,7 @@ useEffect(() => {
     <div className="container mx-auto p-4 mt-24">
       {/* Filtros anclados debajo del header */}
       <div className="fixed top-[70px] left-0 w-full bg-gray-100 flex justify-center">
-        <div className="max-w-[1020px] w-full px-4 flex items-center gap-3 md:gap-4 overflow-x-auto whitespace-nowrap py-3 [&::-webkit-scrollbar]:hidden">
+        <div className="max-w-[1120px] w-full px-4 flex items-center gap-3 md:gap-4 overflow-x-auto whitespace-nowrap py-3 [&::-webkit-scrollbar]:hidden">
           {categories.map((category) => (
             <button
               key={category}
