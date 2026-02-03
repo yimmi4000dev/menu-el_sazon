@@ -23,7 +23,7 @@ export const products: Product[] = [
     id: 103,
     name: "Arepa mixta",
     description: "Carne desmechada, pollo desmechado, huevos de codorniz, mantequilla y sal",
-    price: 12000,
+    price: 10000,
     category: "arepas",
     image: "/images/arepa_mixta.png",
   },
@@ -50,7 +50,7 @@ export const products: Product[] = [
     name: "Arepa super",
     description:
       "[info.product]",
-    price: 13000,
+    price: 15000,
     category: "arepas",
     image: "/images/cargando.png",
   },
