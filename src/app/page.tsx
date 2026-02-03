@@ -46,6 +46,7 @@ export default function MenuPage() {
     "perros calientes",
     "salchipapas",
     "patacon",
+    "picadas",
     "bebidas",
     "adicciones",
   ];
