@@ -15,7 +15,7 @@ export const products: Product[] = [
     id: 102,
     name: "Arepa extra queso",
     description: "Extra de quesillo, mantequilla y sal",
-    price: 6000,
+    price: 5000,
     category: "arepas",
     image: "/images/arepa_extra_queso.png",
   },
