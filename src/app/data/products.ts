@@ -49,7 +49,7 @@ export const products: Product[] = [
     id: 106,
     name: "Arepa super",
     description:
-      "[info.product]",
+      "Carne desmechada, pollo desmechado, jamón, queso, chorizo Brisas picado, huevo de codorniz, carne de hamburguesa, mantequilla y sal",
     price: 14000,
     category: "arepas",
     image: "/images/cargando.png",
@@ -189,7 +189,7 @@ export const products: Product[] = [
   {
     id: 315,
     name: "Hamburguesa premium",
-    description: "[info.product]",
+    description: "(Pan o platano), lechuga, tomate, doble carne artesanal, cebolla caramelizada, ripio, jamon, queso, salchicha picada, huevo frito y salsas",
     price: 12000,
     category: "hamburguesas",
     image: "/images/cargando.png",
@@ -197,7 +197,7 @@ export const products: Product[] = [
   {
     id: 316,
     name: "Hamburguesa campesina gratinada",
-    description: "[info.product]",
+    description: "(Pan o platano), lechuga, tomate, carne artesanal, cebolla caramelizada, ripio, jamon, queso, chorizo Brisa picado, tocineta, huevo frito, queso gratinado y salsas",
     price: 14000,
     category: "hamburguesas",
     image: "/images/cargando.png",
@@ -205,7 +205,7 @@ export const products: Product[] = [
   {
     id: 317,
     name: "Hamburguesa campesina doble res",
-    description: "[info.product]",
+    description: "(Pan o platano), lechuga, tomate, doble carne artesanal, cebolla caramelizada, ripio, jamon, queso, chorizo Brisa picado, tocineta, huevo frito y salsas",
     price: 14000,
     category: "hamburguesas",
     image: "/images/cargando.png",
@@ -213,7 +213,7 @@ export const products: Product[] = [
   {
     id: 318,
     name: "Hamburguesa ranchera mixta",
-    description: "[info.product]",
+    description: "(Pan o platano), lechuga, tomate, carne artesanal, carne de res o cerdo de la marca Las Brisas, cebolla caramelizada, ripio, jamon, queso, salchicha picada, huevo frito y salsas",
     price: 15000,
     category: "hamburguesas",
     image: "/images/cargando.png",
@@ -221,7 +221,7 @@ export const products: Product[] = [
   {
     id: 319,
     name: "Hamburguesa pepinuda",
-    description: "[info.product]",
+    description: "(Pan o platano), lechuga, tomate, carne artesanal, carne de res o cerdo de la marca Las Brisas, cebolla caramelizada, ripio, jamon, queso, salchicha picada, huevo frito, queso gratinado y salsas",
     price: 18000,
     category: "hamburguesas",
     image: "/images/cargando.png",
@@ -287,7 +287,7 @@ export const products: Product[] = [
    {
     id: 407,
     name: "Perro caliente gratinado",
-    description: "[info.product]",
+    description: "Pan, salchicha americana, cebolla caramelizada, ripio, queso gratinado y salsas",
     price: 13000,
     category: "perros calientes",
     image: "/images/cargando.png",
@@ -328,11 +328,11 @@ export const products: Product[] = [
   },
   {
     id: 505,
-    name: "Salchi-costilla",
-    description: "[info.product]",
+    name: "Super salchipapa gratinada",
+    description: "Papa a la francesa, salchicha, maduro, jamon, carne desmechada, pollo desmechado, maiz tierno en salsa y queso fundido",
     price: 30000,
     category: "salchipapas",
-    image: "/images/cargando.png",
+    image: "/images/salchipapa_super_gratinada.png",
   },
 
   //ID de patacones sobre el numero 600
