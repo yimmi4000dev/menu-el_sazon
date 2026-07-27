@@ -38,6 +38,15 @@ export const products: Product[] = [
   },
   {
     id: 105,
+    name: "Arepa rellena con chicharron",
+    description:
+      "Carne desmechada, pollo desmechado, jamón, queso, chorizo Brisas picado, chicharron crocante, huevo de codorniz, mantequilla y sal",
+    price: 12000,
+    category: "arepas",
+    image: "/images/cargando.png",
+  },
+  {
+    id: 106,
     name: "Arepa criolla",
     description:
       "Carne desmechada, pollo desmechado, jamón, queso, chorizo Brisas picado, huevo de codorniz, maiz tierno en salsa, mantequilla y sal",
@@ -46,7 +55,7 @@ export const products: Product[] = [
     image: "/images/arepa_criolla.png",
   },
   {
-    id: 106,
+    id: 107,
     name: "Arepa super",
     description:
       "Carne desmechada, pollo desmechado, jamón, queso, chorizo Brisas picado, huevo de codorniz, carne de hamburguesa, mantequilla y sal",
@@ -55,7 +64,7 @@ export const products: Product[] = [
     image: "/images/cargando.png",
   },
   {
-    id: 107,
+    id: 108,
     name: "Arepa queso y huevos",
     description:
       "Quesillo, huevos de codorniz, mantequilla y sal",
