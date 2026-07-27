@@ -31,7 +31,7 @@ export default function Footer() {
           <div className="flex gap-4">
             <p> 320 320 8915</p>
             <p> - </p>
-            <p> 311 499 9126</p>
+            <p> </p>
           </div>
         </div>
 

@@ -54,6 +54,15 @@ export const products: Product[] = [
     category: "arepas",
     image: "/images/cargando.png",
   },
+  {
+    id: 107,
+    name: "Arepa queso y huevos",
+    description:
+      "Quesillo, huevos de codorniz, mantequilla y sal",
+    price: 14000,
+    category: "arepas",
+    image: "/images/cargando.png",
+  },
 
   //ID de chorizos sobre el numero 200
   {
@@ -271,7 +280,7 @@ export const products: Product[] = [
   {
     id: 406,
     name: "Perro caliente ranchero",
-    description: "Pan, salchicha americana, cebolla caramelizada, ripio, queso, tocineta, huevos de codorniz y salsas",
+    description: "Pan, salchicha americana, cebolla caramelizada, ripio, queso, tocineta y salsas",
     price: 12000,
     category: "perros calientes",
     image: "/images/perro_ranchero.png",
