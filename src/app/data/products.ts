@@ -434,7 +434,7 @@ export const products: Product[] = [
     id: 805,
     name: "Hit personal",
     description: "Jugo Hit de 500ml",
-    price: 3500,
+    price: 4000,
     category: "bebidas",
     image: "/images/cargando.png",
   },
