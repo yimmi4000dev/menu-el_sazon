@@ -472,4 +472,12 @@ export const products: Product[] = [
   },
 
   //ID de adicciones sobre el numero 800
+  {
+    id: 901,
+    name: "Porción de huevos de codorniz",
+    description: "8 huevos de codorniz",
+    price: 5000,
+    category: "adicciones",
+    image: "/images/cargando.png",
+  },
 ];
