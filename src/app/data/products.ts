@@ -184,7 +184,7 @@ export const products: Product[] = [
     id: 312,
     name: "Hamburguesa mixta",
     description: "(Pan o platano), lechuga, tomate, carne artesanal, carne de res o cerdo de la marca Las Brisas, cebolla caramelizada, ripio, jamon, queso y salsas",
-    price: 12000,
+    price: 13000,
     category: "hamburguesas",
     image: "/images/cargando.png",
   },
