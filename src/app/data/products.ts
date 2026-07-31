@@ -68,7 +68,16 @@ export const products: Product[] = [
     name: "Arepa queso y huevos",
     description:
       "Quesillo, huevos de codorniz, mantequilla y sal",
-    price: 14000,
+    price: 10000,
+    category: "arepas",
+    image: "/images/cargando.png",
+  },
+  {
+    id: 109,
+    name: "Arepa queso y chicharron",
+    description:
+      "Quesillo, chicharron crocante, mantequilla y sal",
+    price: 10000,
     category: "arepas",
     image: "/images/cargando.png",
   },
