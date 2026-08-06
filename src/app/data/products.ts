@@ -9,7 +9,7 @@ export const products: Product[] = [
     description: "Doble quesillo, jamón, mantequilla y sal",
     price: 5000,
     category: "arepas",
-    image: "/images/arepa_jamon_queso.png",
+    image: "/images/arepa_jamon_queso_v2.png",
   },
   {
     id: 102,
@@ -70,7 +70,7 @@ export const products: Product[] = [
       "Quesillo, huevos de codorniz, mantequilla y sal",
     price: 10000,
     category: "arepas",
-    image: "/images/cargando.png",
+    image: "/images/arepa_queso_huevos.png",
   },
   {
     id: 109,
@@ -219,7 +219,7 @@ export const products: Product[] = [
     description: "(Pan o platano), lechuga, tomate, doble carne artesanal, cebolla caramelizada, ripio, jamon, queso, salchicha picada, huevo frito y salsas",
     price: 12000,
     category: "hamburguesas",
-    image: "/images/cargando.png",
+    image: "/images/hamburguesa_premium.png",
   },
   {
     id: 316,
