@@ -211,7 +211,7 @@ export const products: Product[] = [
     description: "(Pan o platano), lechuga, tomate, doble carne de cerdo de la marca Las Brisas, cebolla caramelizada, ripio, jamon, queso y salsas",
     price: 14000,
     category: "hamburguesas",
-    image: "/images/hamburguesa_cerdo_brisa.png",
+    image: "/images/cargando.png",
   },
   {
     id: 315,
