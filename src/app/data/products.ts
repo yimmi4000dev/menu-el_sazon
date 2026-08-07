@@ -147,7 +147,7 @@ export const products: Product[] = [
     description: "(Pan o platano), lechuga, tomate, carne de res de la marca Las Brisas, cebolla caramelizada, ripio, jamon, queso y salsas",
     price: 9000,
     category: "hamburguesas",
-    image: "/images/cargando.png",
+    image: "/images/hamburguesa_res_brisa.png",
   },
   {
     id: 307,
@@ -211,7 +211,7 @@ export const products: Product[] = [
     description: "(Pan o platano), lechuga, tomate, doble carne de cerdo de la marca Las Brisas, cebolla caramelizada, ripio, jamon, queso y salsas",
     price: 14000,
     category: "hamburguesas",
-    image: "/images/cargando.png",
+    image: "/images/hamburguesa_cerdo_brisa.png",
   },
   {
     id: 315,
@@ -285,7 +285,7 @@ export const products: Product[] = [
     description: "Pan, chorizo de la marca Las Brisas, cebolla caramelizada, ripio, queso y salsas",
     price: 10000,
     category: "perros calientes",
-    image: "/images/cargando.png",
+    image: "/images/perro_choriperro.png",
   },
   {
     id: 405,
@@ -309,7 +309,7 @@ export const products: Product[] = [
     description: "Pan, salchicha americana, cebolla caramelizada, ripio, queso, maiz tierno en salsa y salsas",
     price: 13000,
     category: "perros calientes",
-    image: "/images/cargando.png",
+    image: "/images/perro_criollo.png",
   },
    {
     id: 407,
